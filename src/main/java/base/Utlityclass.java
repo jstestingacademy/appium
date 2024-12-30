@@ -1,5 +1,6 @@
 package base;
 
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.MultiTouchAction;
@@ -9,19 +10,25 @@ import io.appium.java_client.touch.offset.PointOption;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.PointerInput;
+import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.time.Duration;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class Utlityclass  {
 	 
@@ -44,7 +51,7 @@ public class Utlityclass  {
 	        return wait.until(ExpectedConditions.elementToBeClickable(locator));
 	    }
 	  
-	  public void takeScreenshot(String filePath) {
+	  public void takeScreenshot1(String filePath) {
 	        try {
 	            // Capture screenshot
 	            File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -66,62 +73,154 @@ public class Utlityclass  {
 	        String timestamp = String.valueOf(System.currentTimeMillis());
 	        String defaultDirectory = "screenshots/";
 	        String fullPath = defaultDirectory + fileName + "_" + timestamp + ".png";
-	        takeScreenshot(fullPath);
+	        takeScreenshot1(fullPath);
 	    }
 	    
 	    public void clickElement(By locator) {
 	    	waitForClickability(locator, 10).click();
 	    }
 	    
+	    public void getlocation() {
+	    	Point source = driver.findElement(By.xpath("//android.view.View[@resource-id=\"io.appium.android.apis:id/drag_dot_1\"]")).getLocation();
+	    	Point target = driver.findElement(By.xpath("//android.view.View[@resource-id=\"io.appium.android.apis:id/drag_dot_2\"]")).getLocation();
+
+	    	dragAndDrop(source.getX(), source.getY(), target.getX(), target.getY());
+	    }
 	    
-	    //Drag and drop
-	    public void dragAndDrop(By source , By destination) {
-	        try {
-	            // Locate the source and target elements
-	            WebElement sourceElement = driver.findElement(source); // Replace with actual source element locator
-	            WebElement targetElement = driver.findElement(destination); // Replace with actual target element locator
+	    
+	    public void dragAndDrop(int startX, int startY, int endX, int endY) {
+	        PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+	        Sequence dragAndDrop = new Sequence(finger, 0);
 
-	            // Get the location of source and target elements
-	            int startX = sourceElement.getLocation().getX();
-	            int startY = sourceElement.getLocation().getY();
-	            int endX = targetElement.getLocation().getX();
-	            int endY = targetElement.getLocation().getY();
+	        // Press at the source
+	        dragAndDrop.addAction(finger.createPointerMove(Duration.ofMillis(0),
+	                                                       PointerInput.Origin.viewport(), startX, startY));
+	        dragAndDrop.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
 
-	            // Perform drag and drop using TouchAction
-	            new TouchAction((PerformsTouchActions) driver)
-	                .press(PointOption.point(startX, startY)) // Press on the source element
-	                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(500))) // Optionally wait for a while before moving
-	                .moveTo(PointOption.point(endX, endY)) // Move to the target element
-	                .release() // Release the touch action
-	                .perform();
+	        // Drag to the destination
+	        dragAndDrop.addAction(finger.createPointerMove(Duration.ofMillis(1000),
+	                                                       PointerInput.Origin.viewport(), endX, endY));
+	        dragAndDrop.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
 
-	            System.out.println("Drag and drop performed successfully!");
-	        } catch (Exception e) {
-	            // Log the error with more details
-	            System.err.println("Drag and drop failed: " + e.getMessage());
-	            e.printStackTrace();
-	        }
-	    }	
+	        // Perform the action
+	        driver.perform(Arrays.asList(dragAndDrop));
+	    }
 	    //Scroll down
 	    public void scrollDown() {
 	        // Get the screen size
-	        Dimension screenSize = driver.manage().window().getSize();
-	        
-	        // Get the height and width of the screen
-	        int startX = screenSize.width / 2; // Start in the middle of the screen horizontally
-	        int startY = (int) (screenSize.height * 0.8); // Start at 80% of the screen height
-	        int endY = (int) (screenSize.height * 0.2); // Scroll down to 20% of the screen height
+	    	PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+	        Sequence swipe = new Sequence(finger, 1);
+	        swipe.addAction(finger.createPointerMove(Duration.ofMillis(0),
+	                                                 PointerInput.Origin.viewport(), 540, 680));
+	        swipe.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
+	        swipe.addAction(finger.createPointerMove(Duration.ofMillis(1000),
+	                                                 PointerInput.Origin.viewport(), 540, 480));
+	        swipe.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
 
-	        // Perform a swipe (scroll) down
-	        new TouchAction((PerformsTouchActions) driver)
-	            .press(PointOption.point(startX, startY)) // Start the press at (startX, startY)
-	            .moveTo(PointOption.point(startX, endY)) // Move to (startX, endY)
-	            .release() // Release the touch
-	            .perform(); // Perform the action
+	        driver.perform(Arrays.asList(swipe));
+}
+	    public void selectDropdownOption(String optionText) {
+	        try {
+	            // Expand dropdown
+	            WebElement dropdown = driver.findElement(By.xpath("//android.widget.TextView[@resource-id='android:id/text1']"));
+	            dropdown.click();
+	            System.out.println("[INFO] Dropdown expanded.");
 
-	        System.out.println("Scrolled down successfully!");
+	            // Wait for the option to load
+	            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
+	            String optionXpath = "//android.widget.CheckedTextView[@resource-id='android:id/text1' and @text='" + optionText + "']";
+	            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(optionXpath)));
+
+	            // Select the option
+	            WebElement option = driver.findElement(By.xpath(optionXpath));
+	            option.click();
+	            System.out.println("[INFO] Option selected: " + optionText);
+	        } catch (NoSuchElementException e) {
+	            System.err.println("[ERROR] Option not found: " + optionText);
+	            throw e;
+	        } catch (Exception e) {
+	            System.err.println("[ERROR] Failed to select dropdown option: " + e.getMessage());
+	            throw e;
+	        }
+	    } 
+	    
+	    public void zoom(By locator) {
+	       
+	    	 WebElement element = driver.findElement(locator);
+
+	         // Get the center of the element
+	         int centerX = element.getLocation().getX() + (element.getSize().getWidth() / 2);
+	         int centerY = element.getLocation().getY() + (element.getSize().getHeight() / 2);
+	         int zoomDistance = element.getSize().getHeight() / 4;
+
+	         // Define two pointer inputs (Finger1 and Finger2)
+	         PointerInput finger1 = new PointerInput(PointerInput.Kind.TOUCH, "finger1");
+	         PointerInput finger2 = new PointerInput(PointerInput.Kind.TOUCH, "finger2");
+
+	         // Define gestures for finger1
+	         Sequence finger1Sequence = new Sequence(finger1, 0);
+	         finger1Sequence.addAction(finger1.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), centerX, centerY - 10));
+	         finger1Sequence.addAction(finger1.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
+	         finger1Sequence.addAction(finger1.createPointerMove(Duration.ofMillis(500), PointerInput.Origin.viewport(), centerX, centerY - zoomDistance));
+	         finger1Sequence.addAction(finger1.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+
+	         // Define gestures for finger2
+	         Sequence finger2Sequence = new Sequence(finger2, 0);
+	         finger2Sequence.addAction(finger2.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), centerX, centerY + 10));
+	         finger2Sequence.addAction(finger2.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
+	         finger2Sequence.addAction(finger2.createPointerMove(Duration.ofMillis(500), PointerInput.Origin.viewport(), centerX, centerY + zoomDistance));
+	         finger2Sequence.addAction(finger2.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+
+	         // Perform both gestures
+	         try {
+	             driver.perform(Arrays.asList(finger1Sequence, finger2Sequence));
+	             System.out.println("✅ Zoom gesture performed successfully.");
+	         } catch (Exception e) {
+	             System.err.println("❌ Error performing zoom gesture: " + e.getMessage());
+	             throw e;
+	         }
+	     }
+	    
+	    public void swipeHorizontally() {
+	        int screenHeight = driver.manage().window().getSize().height;
+	        int screenWidth = driver.manage().window().getSize().width;
+
+	        int startX = (int) (screenWidth * 0.8); // Start from 80% of screen width
+	        int endX = (int) (screenWidth * 0.2);   // Swipe to 20% of screen width
+	        int y = screenHeight / 2;              // Middle of the screen
+
+	        performSwipe(startX, y, endX, y);
+	    }
+
+	    public void swipeVertically() {
+	        int screenHeight = driver.manage().window().getSize().height;
+	        int screenWidth = driver.manage().window().getSize().width;
+
+	        int startY = (int) (screenHeight * 0.8); // Start from 80% of screen height
+	        int endY = (int) (screenHeight * 0.2);   // Swipe to 20% of screen height
+	        int x = screenWidth / 2;                // Middle of the screen
+
+	        performSwipe(x, startY, x, endY);
+	    }
+
+	    private void performSwipe(int startX, int startY, int endX, int endY) {
+	        PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+	        Sequence swipe = new Sequence(finger, 0);
+
+	        swipe.addAction(finger.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), startX, startY));
+	        swipe.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
+	        swipe.addAction(finger.createPointerMove(Duration.ofMillis(1000), PointerInput.Origin.viewport(), endX, endY));
+	        swipe.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+
+	        try {
+	            driver.perform(Collections.singletonList(swipe));
+	            System.out.println("✅ Swipe gesture performed successfully.");
+	        } catch (Exception e) {
+	            System.err.println("❌ Error performing swipe gesture: " + e.getMessage());
+	            throw e;
+	        }
 	    }
 }
-	    
+
 	    
 

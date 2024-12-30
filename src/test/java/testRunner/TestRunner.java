@@ -6,11 +6,16 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 	    features = {"src/test/resources/Features"},      // Path to feature files
 	    glue = {"stepdefinitions", "Hooks"},              // Package for step definitions and hooks
-	    plugin = {
-	        "pretty",                                    // Output formatted logs in console
-	        "html:target/cucumber-report.html",           // Generate HTML report
-	        "json:target/cucumber-report.json"            // Optional: Generate JSON report for further analysis
-	    }
+	    		plugin = {
+	    		        "pretty",
+	    		        "html:target/cucumber-html-report",
+	    		        "json:target/cucumber.json",
+	    		        "rerun:target/rerun.txt" ,
+	    		        "testRunner.CucumberExtentReportPlugin" // Add extent reports logic to the after plugin lifecycle
+	    		    },
+	    		 monochrome = false
+	    
+	   
 	)
 	public class TestRunner extends AbstractTestNGCucumberTests {
 	    // Empty class - the annotations drive the configuration

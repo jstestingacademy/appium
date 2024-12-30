@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-17T19:11:07 IST" name="Default suite" finished-at="2024-12-17T19:11:48 IST" duration-ms="40777">
+  <suite started-at="2024-12-30T19:19:38 IST" name="Default suite" finished-at="2024-12-30T19:21:21 IST" duration-ms="103305">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@54c5a2ff]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@4082ba93]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-12-17T19:11:07 IST" name="Default test" finished-at="2024-12-17T19:11:48 IST" duration-ms="40777">
+    <test started-at="2024-12-30T19:19:38 IST" name="Default test" finished-at="2024-12-30T19:21:21 IST" duration-ms="103305">
       <class name="testRunner.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunner.TestRunner@54c5a2ff]" started-at="2024-12-17T19:11:07 IST" name="setUpClass" finished-at="2024-12-17T19:11:08 IST" duration-ms="586" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunner.TestRunner@4082ba93]" started-at="2024-12-30T19:19:38 IST" name="setUpClass" finished-at="2024-12-30T19:19:39 IST" duration-ms="1492" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@4fecf308]]>
+                <![CDATA[org.testng.TestRunner@43b6cb1c]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@54c5a2ff]" started-at="2024-12-17T19:11:08 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-17T19:11:48 IST" duration-ms="40097" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@4082ba93]" started-at="2024-12-30T19:19:39 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-30T19:20:05 IST" duration-ms="25270" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -34,36 +34,116 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //android.widget.TextView[@content-desc='Views'] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.0.0', revision: '3a21814679'
-System info: host: 'DESKTOP-C4MOHRM', ip: '169.254.48.77', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appium:PlatformVersion: 14.0, appium:app: F:\mobileapp\ApiDemos-debug..., appium:appActivity: .ApiDemos, appium:appPackage: io.appium.android.apis, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {PlatformVersion: 14.0, app: F:\mobileapp\ApiDemos-debug..., appActivity: .ApiDemos, appPackage: io.appium.android.apis, automationName: UiAutomator2, deviceName: emulator-5556, plaformName: Android, platformName: android}, appium:deviceApiLevel: 34, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5556, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5556, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:plaformName: Android, appium:platformVersion: 14, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: android}
-Session ID: 200da435-6f75-45bf-b332-ce2f573435ab]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //android.widget.TextView[@content-desc='Views'] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.0.0', revision: '3a21814679'
-System info: host: 'DESKTOP-C4MOHRM', ip: '169.254.48.77', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appium:PlatformVersion: 14.0, appium:app: F:\mobileapp\ApiDemos-debug..., appium:appActivity: .ApiDemos, appium:appPackage: io.appium.android.apis, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {PlatformVersion: 14.0, app: F:\mobileapp\ApiDemos-debug..., appActivity: .ApiDemos, appPackage: io.appium.android.apis, automationName: UiAutomator2, deviceName: emulator-5556, plaformName: Android, platformName: android}, appium:deviceApiLevel: 34, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5556, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5556, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:plaformName: Android, appium:platformVersion: 14, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: android}
-Session ID: 200da435-6f75-45bf-b332-ce2f573435ab
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at base.Utlityclass.waitForClickability(Utlityclass.java:42)
-at base.Utlityclass.clickElement(Utlityclass.java:71)
-at pages.ViewPage.Clickview(ViewPage.java:22)
-at stepdefinitions.ViewSteps.click_the_view_link(ViewSteps.java:34)
-at ✽.Click the view Link(file:///C:/Users/C2TA/eclipse-workspace/ApidemoAppiumFramework/src/test/resources/Features/Testcase.feature:5)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunner.TestRunner@54c5a2ff]" started-at="2024-12-17T19:11:48 IST" name="tearDownClass" finished-at="2024-12-17T19:11:48 IST" duration-ms="61" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@4082ba93]" started-at="2024-12-30T19:20:05 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-30T19:20:26 IST" duration-ms="21157" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To Validate the Drag and Drop functionality"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["to Test the API DEmo app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@4082ba93]" started-at="2024-12-30T19:20:26 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-30T19:20:47 IST" duration-ms="21072" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To validate the drop down Functionality"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["to Test the API DEmo app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@4082ba93]" started-at="2024-12-30T19:20:47 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-30T19:21:05 IST" duration-ms="17738" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To validate the zoom Functionality"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["to Test the API DEmo app"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0', revision: '3a21814679'
+System info: host: 'DESKTOP-C4MOHRM', ip: '169.254.48.77', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [348e9c6e-ee26-4734-80bf-5ff0a8033108, findElement {using=xpath, value=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.view.View}]
+Capabilities {appium:PlatformVersion: 14.0, appium:app: F:\mobileapp\ApiDemos-debug..., appium:appActivity: .ApiDemos, appium:appPackage: io.appium.android.apis, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {PlatformVersion: 14.0, app: F:\mobileapp\ApiDemos-debug..., appActivity: .ApiDemos, appPackage: io.appium.android.apis, automationName: UiAutomator2, deviceName: emulator-5554, platformName: android}, appium:deviceApiLevel: 34, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 14, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: android}
+Session ID: 348e9c6e-ee26-4734-80bf-5ff0a8033108]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0', revision: '3a21814679'
+System info: host: 'DESKTOP-C4MOHRM', ip: '169.254.48.77', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [348e9c6e-ee26-4734-80bf-5ff0a8033108, findElement {using=xpath, value=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.view.View}]
+Capabilities {appium:PlatformVersion: 14.0, appium:app: F:\mobileapp\ApiDemos-debug..., appium:appActivity: .ApiDemos, appium:appPackage: io.appium.android.apis, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {PlatformVersion: 14.0, app: F:\mobileapp\ApiDemos-debug..., appActivity: .ApiDemos, appPackage: io.appium.android.apis, automationName: UiAutomator2, deviceName: emulator-5554, platformName: android}, appium:deviceApiLevel: 34, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 14, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: android}
+Session ID: 348e9c6e-ee26-4734-80bf-5ff0a8033108
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:180)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+at base.Utlityclass.zoom(Utlityclass.java:149)
+at pages.ZoomPage.zoompic(ZoomPage.java:31)
+at stepdefinitions.ZoomSteps.zoom_the_picture(ZoomSteps.java:33)
+at ✽.Zoom the picture(file:///C:/Users/C2TA/eclipse-workspace/ApidemoAppiumFramework/src/test/resources/Features/Testcase.feature:31)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@4082ba93]" started-at="2024-12-30T19:21:05 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-30T19:21:21 IST" duration-ms="16422" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To Validate the swipe Functionality"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["to Test the API DEmo app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunner.TestRunner@4082ba93]" started-at="2024-12-30T19:21:21 IST" name="tearDownClass" finished-at="2024-12-30T19:21:21 IST" duration-ms="79" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

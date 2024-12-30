@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>4/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Dec 17 19:11:07 IST 2024</td>
+<td>Started on:</td><td>Mon Dec 30 19:19:38 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>40 seconds (40777 ms)</td>
+<tr><td>Total time:</td><td>103 seconds (103305 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -70,42 +70,100 @@ function toggleAllBoxes() {
 <table width='100%' border='1' class='invocation-failed'>
 <tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To validate the zoom Functionality", "to Test the API DEmo app"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
+System info: host: &apos;DESKTOP-C4MOHRM&apos;, ip: &apos;169.254.48.77&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [348e9c6e-ee26-4734-80bf-5ff0a8033108, findElement {using=xpath, value=//android.widget.FrameLayout[@resource-id=&quot;android:id/content&quot;]/android.view.View}]
+Capabilities {appium:PlatformVersion: 14.0, appium:app: F:\mobileapp\ApiDemos-debug..., appium:appActivity: .ApiDemos, appium:appPackage: io.appium.android.apis, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {PlatformVersion: 14.0, app: F:\mobileapp\ApiDemos-debug..., appActivity: .ApiDemos, appPackage: io.appium.android.apis, automationName: UiAutomator2, deviceName: emulator-5554, platformName: android}, appium:deviceApiLevel: 34, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 14, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: android}
+Session ID: 348e9c6e-ee26-4734-80bf-5ff0a8033108
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:180)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+	at base.Utlityclass.zoom(Utlityclass.java:149)
+	at pages.ZoomPage.zoompic(ZoomPage.java:31)
+	at stepdefinitions.ZoomSteps.zoom_the_picture(ZoomSteps.java:33)
+	at ✽.Zoom the picture(file:///C:/Users/C2TA/eclipse-workspace/ApidemoAppiumFramework/src/test/resources/Features/Testcase.feature:31)
+</pre></div><a href='#' onClick='toggleBox("stack-trace710699894", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace710699894'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
+System info: host: &apos;DESKTOP-C4MOHRM&apos;, ip: &apos;169.254.48.77&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [348e9c6e-ee26-4734-80bf-5ff0a8033108, findElement {using=xpath, value=//android.widget.FrameLayout[@resource-id=&quot;android:id/content&quot;]/android.view.View}]
+Capabilities {appium:PlatformVersion: 14.0, appium:app: F:\mobileapp\ApiDemos-debug..., appium:appActivity: .ApiDemos, appium:appPackage: io.appium.android.apis, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {PlatformVersion: 14.0, app: F:\mobileapp\ApiDemos-debug..., appActivity: .ApiDemos, appPackage: io.appium.android.apis, automationName: UiAutomator2, deviceName: emulator-5554, platformName: android}, appium:deviceApiLevel: 34, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 14, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: android}
+Session ID: 348e9c6e-ee26-4734-80bf-5ff0a8033108
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:180)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+	at base.Utlityclass.zoom(Utlityclass.java:149)
+	at pages.ZoomPage.zoompic(ZoomPage.java:31)
+	at stepdefinitions.ZoomSteps.zoom_the_picture(ZoomSteps.java:33)
+	at ✽.Zoom the picture(file:///C:/Users/C2TA/eclipse-workspace/ApidemoAppiumFramework/src/test/resources/Features/Testcase.feature:31)
+</pre></div></td>
+<td>17</td>
+<td>testRunner.TestRunner@4082ba93</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
 <td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To Navigate to View Page", "to Test the API DEmo app"</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //android.widget.TextView[@content-desc=&apos;Views&apos;] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
-System info: host: &apos;DESKTOP-C4MOHRM&apos;, ip: &apos;169.254.48.77&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appium:PlatformVersion: 14.0, appium:app: F:\mobileapp\ApiDemos-debug..., appium:appActivity: .ApiDemos, appium:appPackage: io.appium.android.apis, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {PlatformVersion: 14.0, app: F:\mobileapp\ApiDemos-debug..., appActivity: .ApiDemos, appPackage: io.appium.android.apis, automationName: UiAutomator2, deviceName: emulator-5556, plaformName: Android, platformName: android}, appium:deviceApiLevel: 34, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5556, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5556, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:plaformName: Android, appium:platformVersion: 14, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: android}
-Session ID: 200da435-6f75-45bf-b332-ce2f573435ab
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at base.Utlityclass.waitForClickability(Utlityclass.java:42)
-	at base.Utlityclass.clickElement(Utlityclass.java:71)
-	at pages.ViewPage.Clickview(ViewPage.java:22)
-	at stepdefinitions.ViewSteps.click_the_view_link(ViewSteps.java:34)
-	at ✽.Click the view Link(file:///C:/Users/C2TA/eclipse-workspace/ApidemoAppiumFramework/src/test/resources/Features/Testcase.feature:5)
-</pre></div><a href='#' onClick='toggleBox("stack-trace362311125", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace362311125'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //android.widget.TextView[@content-desc=&apos;Views&apos;] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
-System info: host: &apos;DESKTOP-C4MOHRM&apos;, ip: &apos;169.254.48.77&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appium:PlatformVersion: 14.0, appium:app: F:\mobileapp\ApiDemos-debug..., appium:appActivity: .ApiDemos, appium:appPackage: io.appium.android.apis, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {PlatformVersion: 14.0, app: F:\mobileapp\ApiDemos-debug..., appActivity: .ApiDemos, appPackage: io.appium.android.apis, automationName: UiAutomator2, deviceName: emulator-5556, plaformName: Android, platformName: android}, appium:deviceApiLevel: 34, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5556, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5556, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:plaformName: Android, appium:platformVersion: 14, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: android}
-Session ID: 200da435-6f75-45bf-b332-ce2f573435ab
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at base.Utlityclass.waitForClickability(Utlityclass.java:42)
-	at base.Utlityclass.clickElement(Utlityclass.java:71)
-	at pages.ViewPage.Clickview(ViewPage.java:22)
-	at stepdefinitions.ViewSteps.click_the_view_link(ViewSteps.java:34)
-	at ✽.Click the view Link(file:///C:/Users/C2TA/eclipse-workspace/ApidemoAppiumFramework/src/test/resources/Features/Testcase.feature:5)
-</pre></div></td>
-<td>40</td>
-<td>testRunner.TestRunner@54c5a2ff</td></tr>
+<td></td>
+<td>25</td>
+<td>testRunner.TestRunner@4082ba93</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To Validate the Drag and Drop functionality", "to Test the API DEmo app"</td>
+<td></td>
+<td>21</td>
+<td>testRunner.TestRunner@4082ba93</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To validate the drop down Functionality", "to Test the API DEmo app"</td>
+<td></td>
+<td>21</td>
+<td>testRunner.TestRunner@4082ba93</td></tr>
+<tr>
+<td title='testRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To Validate the swipe Functionality", "to Test the API DEmo app"</td>
+<td></td>
+<td>16</td>
+<td>testRunner.TestRunner@4082ba93</td></tr>
 </table><p>
 </body>
 </html>

@@ -7,7 +7,7 @@
 
     <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
     <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
-    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -21,8 +21,7 @@
      -->
   </head>
 
-  <body>
-    <div class="top-banner-root">
+  <body>    <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
@@ -51,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\C2TA\AppData\Local\Temp\testng-eclipse--139822681\testng-customsuite.xml</span>
+                    <span>C:\Users\C2TA\AppData\Local\Temp\testng-eclipse--1594257894\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -104,10 +103,39 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="testRunner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;To Navigate to View Page&quot;, &quot;to Test the API DEmo app&quot;)">runScenario("To Navigate to View Page", "to Test the API DEmo app")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="testRunner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;To validate the zoom Functionality&quot;, &quot;to Test the API DEmo app&quot;)">runScenario("To validate the zoom Functionality", "to Test the API DEmo app")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Default_suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="testRunner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;To Navigate to View Page&quot;, &quot;to Test the API DEmo app&quot;)">runScenario("To Navigate to View Page", "to Test the API DEmo app")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="testRunner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;To Validate the Drag and Drop functionality&quot;, &quot;to Test the API DEmo app&quot;)">runScenario("To Validate the Drag and Drop functionality", "to Test the API DEmo app")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="testRunner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;To validate the drop down Functionality&quot;, &quot;to Test the API DEmo app&quot;)">runScenario("To validate the drop down Functionality", "to Test the API DEmo app")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="testRunner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;To Validate the swipe Functionality&quot;, &quot;to Test the API DEmo app&quot;)">runScenario("To Validate the swipe Functionality", "to Test the API DEmo app")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -127,23 +155,37 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;To Navigate to View Page&quot;, &quot;to Test the API DEmo app&quot;)">
-                  </a> <!-- runScenario("To Navigate to View Page", "to Test the API DEmo app") -->
+                  <a name="runScenario(&quot;To validate the zoom Functionality&quot;, &quot;to Test the API DEmo app&quot;)">
+                  </a> <!-- runScenario("To validate the zoom Functionality", "to Test the API DEmo app") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("To Navigate to View Page", "to Test the API DEmo app")</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //android.widget.TextView[@content-desc=&apos;Views&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+                  <span class="parameters">("To validate the zoom Functionality","to Test the API DEmo app")</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
 System info: host: &apos;DESKTOP-C4MOHRM&apos;, ip: &apos;169.254.48.77&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appium:PlatformVersion: 14.0, appium:app: F:\mobileapp\ApiDemos-debug..., appium:appActivity: .ApiDemos, appium:appPackage: io.appium.android.apis, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {PlatformVersion: 14.0, app: F:\mobileapp\ApiDemos-debug..., appActivity: .ApiDemos, appPackage: io.appium.android.apis, automationName: UiAutomator2, deviceName: emulator-5556, plaformName: Android, platformName: android}, appium:deviceApiLevel: 34, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5556, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5556, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:plaformName: Android, appium:platformVersion: 14, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: android}
-Session ID: 200da435-6f75-45bf-b332-ce2f573435ab
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at base.Utlityclass.waitForClickability(Utlityclass.java:42)
-	at base.Utlityclass.clickElement(Utlityclass.java:71)
-	at pages.ViewPage.Clickview(ViewPage.java:22)
-	at stepdefinitions.ViewSteps.click_the_view_link(ViewSteps.java:34)
-	at ✽.Click the view Link(file:///C:/Users/C2TA/eclipse-workspace/ApidemoAppiumFramework/src/test/resources/Features/Testcase.feature:5)
+Command: [348e9c6e-ee26-4734-80bf-5ff0a8033108, findElement {using=xpath, value=//android.widget.FrameLayout[@resource-id=&quot;android:id/content&quot;]/android.view.View}]
+Capabilities {appium:PlatformVersion: 14.0, appium:app: F:\mobileapp\ApiDemos-debug..., appium:appActivity: .ApiDemos, appium:appPackage: io.appium.android.apis, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {PlatformVersion: 14.0, app: F:\mobileapp\ApiDemos-debug..., appActivity: .ApiDemos, appPackage: io.appium.android.apis, automationName: UiAutomator2, deviceName: emulator-5554, platformName: android}, appium:deviceApiLevel: 34, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 14, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: android}
+Session ID: 348e9c6e-ee26-4734-80bf-5ff0a8033108
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:180)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+	at base.Utlityclass.zoom(Utlityclass.java:149)
+	at pages.ZoomPage.zoompic(ZoomPage.java:31)
+	at stepdefinitions.ZoomSteps.zoom_the_picture(ZoomSteps.java:33)
+	at ✽.Zoom the picture(file:///C:/Users/C2TA/eclipse-workspace/ApidemoAppiumFramework/src/test/resources/Features/Testcase.feature:31)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -152,10 +194,58 @@ Session ID: 200da435-6f75-45bf-b332-ce2f573435ab
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testRunner.TestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;To Navigate to View Page&quot;, &quot;to Test the API DEmo app&quot;)">
+                  </a> <!-- runScenario("To Navigate to View Page", "to Test the API DEmo app") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("To Navigate to View Page","to Test the API DEmo app")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;To Validate the Drag and Drop functionality&quot;, &quot;to Test the API DEmo app&quot;)">
+                  </a> <!-- runScenario("To Validate the Drag and Drop functionality", "to Test the API DEmo app") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("To Validate the Drag and Drop functionality","to Test the API DEmo app")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;To validate the drop down Functionality&quot;, &quot;to Test the API DEmo app&quot;)">
+                  </a> <!-- runScenario("To validate the drop down Functionality", "to Test the API DEmo app") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("To validate the drop down Functionality","to Test the API DEmo app")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;To Validate the swipe Functionality&quot;, &quot;to Test the API DEmo app&quot;)">
+                  </a> <!-- runScenario("To Validate the swipe Functionality", "to Test the API DEmo app") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("To Validate the swipe Functionality","to Test the API DEmo app")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\C2TA\AppData\Local\Temp\testng-eclipse--139822681\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\C2TA\AppData\Local\Temp\testng-eclipse--1594257894\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -212,16 +302,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'testRunner.TestRunner')
-data.setCell(0, 3, 40097);
+data.setCell(0, 3, 25270);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'runScenario')
+data.setCell(1, 2, 'testRunner.TestRunner')
+data.setCell(1, 3, 21157);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'runScenario')
+data.setCell(2, 2, 'testRunner.TestRunner')
+data.setCell(2, 3, 21072);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'runScenario')
+data.setCell(3, 2, 'testRunner.TestRunner')
+data.setCell(3, 3, 17738);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'runScenario')
+data.setCell(4, 2, 'testRunner.TestRunner')
+data.setCell(4, 3, 16422);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 40 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -249,18 +355,34 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">testRunner.TestRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@4fecf308)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@43b6cb1c)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <span class="method-name">runScenario("To Navigate to View Page", "to Test the API DEmo app")</span>
+                <span class="method-start">1505 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("To Validate the Drag and Drop functionality", "to Test the API DEmo app")</span>
+                <span class="method-start">26783 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("To validate the drop down Functionality", "to Test the API DEmo app")</span>
+                <span class="method-start">47944 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">runScenario("To Navigate to View Page", "to Test the API DEmo app")</span>
-                <span class="method-start">595 ms</span>
+                <span class="method-name">runScenario("To validate the zoom Functionality", "to Test the API DEmo app")</span>
+                <span class="method-start">69018 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("To Validate the swipe Functionality", "to Test the API DEmo app")</span>
+                <span class="method-start">86767 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">40697 ms</span>
+                <span class="method-start">103198 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
